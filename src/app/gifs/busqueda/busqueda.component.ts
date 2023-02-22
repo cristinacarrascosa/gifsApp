@@ -16,7 +16,12 @@ export class BusquedaComponent {
   buscar(  ) {
     const valor = this.txtBuscar.nativeElement.value;
 
-    
+    // introducir el valor en el array historial declarado en el servicio gifs.service.ts
+    this.gifsService.buscarGifs( valor );
+
+    console.log(valor);
+
+
 
     this.txtBuscar.nativeElement.value = '';
   }
